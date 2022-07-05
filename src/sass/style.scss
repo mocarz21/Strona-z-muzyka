@@ -1,0 +1,256 @@
+// podzielić na sekcje
+// napisy nachodzace na obraz maja inny kolor
+//
+
+// Global //
+
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+
+body{
+  margin: 0;
+  display: flexbox;
+  background: black;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Header //
+
+.header{
+  background-image: url(/images/background.jpg);
+    
+  background-size: cover;
+  height: 1200px;
+  width: 100%;
+  position: relative;
+    
+
+  .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    text-align: center;
+        
+  }
+
+  h1,h2{
+    color: white;
+    font-size: 50px;
+    margin: 10px;
+    line-height: 100PX;
+    margin-top: 100PX;
+    text-transform: uppercase;
+         
+  }
+
+  h1{
+    font-size: 220px;
+    letter-spacing: 100px;
+    font-weight: bold;
+    margin-top: 150PX;
+        
+  }
+}
+
+.main-nav{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+}
+
+a{
+  padding: 0 40px 0 40px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+// PAGES //
+
+#pages{
+  position: relative;
+  text-align: center;
+        
+  // > * {
+  //     display: none;
+  // }
+    
+  > .active {
+    display: block;
+  }
+    
+  .container {
+    height: 1200px;
+    width: 100%;
+    margin: 50px;
+    padding: 0 20px;
+    color: white;
+    text-align: center;
+    font-size: 140px;
+        
+  }
+}
+
+// HOME //
+
+.subscribe{
+  background-image: url(/images/subscribe.jpg);
+  background-size: cover;
+  height: 1200px ;
+  width: auto;
+  position: relative;
+}
+
+.subscribe{
+  h1{
+    position: absolute;
+    font-size: 200px;
+    color: white;
+    margin-top: 0;
+    top: -20px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+  }
+}
+
+footer{
+  width: auto;
+  height: auto;
+
+  h3{
+    color: white;
+  }
+}
+
+.subscribe-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  
+
+  button{
+    height: 100px;
+    width: 250px;
+    border-radius: 15%;
+    right: 100px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .artist{
+    width: auto;
+    height: auto;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    margin-left: 30%;
+
+    h1{
+      font-size: 100px;
+      top: 30%;
+      left: -40%;
+      margin-right: 0;
+      transform: translate(0, 0);
+      position: absolute;
+
+    }
+
+    h3{
+      font-size: 50px;
+      color: white;
+      text-align: end;
+      margin: 0;
+    }
+
+    h4{
+      font-size: 40px;
+      color: white;
+      margin: 0;
+    }
+
+    img{
+      width: auto;
+      height: auto;
+      
+    }
+  }
+
+}
+
+.songs{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  h4{
+    font-size: 40px;
+    margin: 0;
+  }
+
+  h5{
+    font-size: 20px;
+    margin: 0 50px 0 50px;
+    
+  }
+
+  .player{
+    margin-top: 50px;
+    text-align: center;
+
+  }
+}
+  
+.player-footer{
+  display: flex;
+}
+
+.active{
+  display: block;
+}
+
+/* search */
+
+form{
+  font-size: 50px;
+
+  >legend{
+    font-size: 200px;
+    margin: 40px;
+  }
+
+  input{
+    font-size: 60px;
+  }
+}
+
+.submit-search{
+  border-radius: 10%;
+  background: red;
+  cursor : pointer;
+}

@@ -6,13 +6,82 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Serwis z muzyka</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
 </head>
 <body>
+  <section> </section>
   <header class="header">
-      <h1>Serwis z muzyka</h1>
+    <div class="logo">
+      <h1>Taste</h1>
+      <h2>Engage <br> in <br> art</h2>
+    </div>
+    <div class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#search">Search</a>
+      <a href="#discover">Discover</a>
+  </div>
   </header>
-  <section id ="home">
-  </section>
+  <div id="pages" class="start-page">
+    <section id="home">
+      <div class="home-wrapper container">
+        <h1>HOME</h1>
+        <!-- -->
+        <div class="songs">
+        </div>
+      </div>
+      <div class="subscribe">
+        <h1>Subscribe now</h1>
+        <div class="subscribe-wrapper">
+          <button type="button">Join Now</button>
+          <div class="artist">
+            <img src="images/artist.jpg" alt="jacket">
+            <h1>Dean <br> Hanson</h1>
+            <h3>New album</h3>
+            <h4>Available only for subscribers</h4>
+          </div>
+        </div>
+      </div>
+      <footer >
+        <h3>All right reserved</h3>
+      </footer>
+    </section>
+    <section id="search">
+      <div class="search-wrapper container">
+        <form>
+          <legend>Search</legend>
+          Song Name:<input class="song-name" placeholder="Wpisz nazwę piosenki" type="text">
+          <input class="submit-search" type="button" value="Search">
+        </form>
+        <div class="songs">
+        </div>
+        <footer >
+          <h3>All right reserved</h3>
+        </footer>
+      </div>
+    </section>
+    <section id="discover">
+      <div class="discover-wrapper container">
+        <h1>Discover</h1>
+        <div class="songs">
+        </div>
+      </div>
+    </section>
+  </div>
+  <script id="template-player" type="text/x-handlebars-template">
+    <div>
+    <h4>{{title}}</h4>
+    <div class="player">
+      <audio>
+          <source src="songs/{{filename}}" type="audio/mpeg">
+      </audio>
+    </div>
+    <div class="player-footer">
+     <h5>{{categories}}</h5>
+     <h5>{{ranking}}</h5>
+     </div>
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 </html>
