@@ -21,7 +21,7 @@ export const select = {
 
 export const settings = {
   db: {
-    url: '//localhost:3131',
+    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
     songs: 'songs',
     searchName: 'title_like=',
     searchId: 'id='
