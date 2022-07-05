@@ -7,7 +7,6 @@ class Songs{
     thisSong.id = id;
     thisSong.data = data;
     thisSong.renderInMenu();
-    console.log('data', data);
   }
 
   renderInMenu(){

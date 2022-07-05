@@ -46,10 +46,8 @@ class Search{
     const thisSearch = this;
 
     const generatedHTML = templates.playerBox(music);   
-    console.log(generatedHTML);
 
     thisSearch.element = utils.createDOMFromHTML(generatedHTML);    
-
 
     const songContainer = document.querySelector(select.containerOf.searchBox);
 

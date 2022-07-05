@@ -32,7 +32,7 @@ const app = {
         if(id=='discover'){
           document.querySelector(select.containerOf.discoverBox).innerHTML ='';
           new Discover(thisApp.data.songs);
-          console.log('Discover zakładka');
+          
         }
         window.location.hash = '#/' + id;
       });
@@ -118,14 +118,13 @@ const app = {
   },
 
   lowerCasetoUper: function(){
-    const lowerCase = document.querySelectorAll('h1 , h2 ,h3 ,h4');
-    console.log(lowerCase);
-    console.log('h1');
-    for(let lower in lowerCase){
-      console.log('lower', lower);
-      let abc = lowerCase[lower].innerHTML;
-      console.log('napis', abc);
-      abc = abc.toUpperCase();
+    const elements = document.querySelectorAll('h1 , h2 ,h3 ,h4');
+    for(let element  of elements){
+      
+      let text = element.innerHTML;
+     
+      element.innerHTML =text.toUpperCase();
+      
     }
   }
 

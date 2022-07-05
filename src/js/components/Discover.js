@@ -25,7 +25,7 @@ class Discover{
       
       max =Math.max(max,thisDiscover.data[id].id);
     } 
-    console.log('max',max);
+    
     thisDiscover.random(max);
   }
 
@@ -33,7 +33,6 @@ class Discover{
     const thisDiscover =this;
     let randomId = Math.floor(Math.random() * max + 1);
 
-    console.log(randomId);
     thisDiscover.getDate(randomId);
   }
   getDate(randomId){
@@ -51,8 +50,6 @@ class Discover{
       .then(function(parsedResponse){
         thisDiscover.data.songs = parsedResponse;
 
-        console.log(thisDiscover.data.songs[0]);
-
         thisDiscover.renderInDiscover(thisDiscover.data.songs[0]);
         thisDiscover.initGreenAudioPlayer();
       });
@@ -62,7 +59,6 @@ class Discover{
     const thisSearch = this;
 
     const generatedHTML = templates.playerBox(music);   
-    console.log(generatedHTML);
 
     thisSearch.element = utils.createDOMFromHTML(generatedHTML);    
 
