@@ -117,6 +117,10 @@ a{
   height: 1200px ;
   width: auto;
   position: relative;
+
+  span{
+    color: red;
+  }
 }
 
 .subscribe{
@@ -253,4 +257,126 @@ form{
   border-radius: 10%;
   background: red;
   cursor : pointer;
+}
+
+//* RWD *//
+
+@media(min-width: 320px) and (max-width: 780px ){
+
+  h1{
+    font-size: 40px;
+  }
+  h2{
+    font-size: 25px;
+  }
+  a{
+    font-size: 40px;
+    padding: 0 10px 0 10px;
+  }
+
+  .header{
+    background-image: url(/images/background.jpg);
+  
+    background-size: cover;
+    height: 360px;
+    width: 140%;
+    position: relative;
+      
+
+    .logo{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) ;
+      text-align: center;
+          
+    }
+
+    h1,h2{
+      color: white;
+      font-size: 25px;
+      margin: 10px;
+      line-height: 25PX;
+      margin-top: 10PX;
+      text-transform: uppercase;
+          
+    }
+
+    h1{
+      font-size: 40px;
+      letter-spacing: 20px;
+      font-weight: bold;
+      margin-top: 150PX;
+          
+    }
+  }
+  .subscribe{
+    background-image: url(/images/subscribe.jpg);
+    background-size: cover;
+    height: 600px ;
+    width: auto;
+    position: relative;
+
+    h1{
+      font-size: 40px;
+    }
+    h2{
+      font-size: 25px;
+    }
+    a{
+      font-size: 40px;
+      padding: 0 10px 0 10px;
+    }
+
+  }
+  .artist{
+    width: auto;
+    height: auto;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    margin-left: 30%;
+
+    img{
+      width: auto;
+      height: auto;
+      
+    }
+      h1{
+        font-size: 100px;
+        top: 30%;
+        left: -40%;
+        margin-right: 0;
+        transform: translate(0, 0);
+        position: absolute;
+
+      }
+    h3{
+      font-size: 25px;
+    }
+    h4{
+      font-size: 25px;
+    }
+    a{
+      font-size: 40px;
+      padding: 0 10px 0 10px;
+    }
+  }
+
+  .artist{
+    width: auto;
+    height: auto;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    margin-left: 30%;
+    img{
+      width: auto;
+      height: auto;
+      
+    }
+  }
 }
